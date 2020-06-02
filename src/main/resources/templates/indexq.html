@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../static/css/menustyle.css" th:href="@{/css/menustyle.css}"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link href="../static/images/favicon.iso.ico" rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.iso.ico}" />
+    <!--<script src="project.js"></script>-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+</head>
+<body>
+<div class="container">
+
+    <!--логоаут-->
+    <!--<form th:action="@{/logout}" method="post">-->
+    <!--<input type="submit" value="Sign Out"/>-->
+    <!--</form>-->
+    <header th:insert="blocks/header :: header"></header>
+
+    <div class="box">
+        <div class="row">
+            <div class="col-6">
+                <div class="text">
+
+                    <p> Как часто Вам приходится стоять в очередях? Ответ очевиден!
+                        Даже сама мысль о том, что в очереди мы теряем столько своего драгоценного времени,
+                        заставляет нас огорчаться. Затем мы меняем планы, опаздываем на важные совещания,
+                        становимся нервными и раздражительными. Наш сервис поможет вам сохранить время, силы,
+                        нервы и хорошее настроение
+                    </p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-4"><img class="round" src="images/clockb211.png" alt=""></div>
+                    <div class="col-4"><img class="round" src="images/t2.png" alt=""></div>
+                    <div class="col-4"><img class="round" src="images/clock2.png" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4"><img class="round" src="images/t3.png" alt=""></div>
+                    <div class="col-4"><img class="round" src="images/t4.png" alt=""></div>
+                    <div class="col-4"><img class="round" src="images/time.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="album-sec">
+        <div class="containeringex">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-album">
+                        <div class="album-img">
+                            <img src="images/n1.jpg" alt="img1">
+                        </div>
+                        <div class="album-content">
+                            <div class="album-info">
+                                <h3>Экономия времени</h3>
+                            </div>
+                            <p class="album-text">Не тратьте часы на ожидание в очередях </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-album">
+                        <div class="album-img">
+                            <img src="images/n2.jpg" alt="img1">
+                        </div>
+                        <div class="album-content">
+                            <div class="album-info">
+                                <h3>Экономия времени</h3>
+                            </div>
+                            <p class="album-text">Не тратьте часы на ожидание в очередях </p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="single-album">
+                        <div class="album-img">
+                            <img src="images/n3.jpg" alt="img1">
+                        </div>
+                        <div class="album-content">
+                            <div class="album-info">
+                                <h3>Экономия времени</h3>
+                            </div>
+                            <p class="album-text">Не тратьте часы на ожидание в очередях </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+body {
+    background: url("images/white.jpg");
+    margin: 0;
+    font-family: "Monsterrat", sans-serif;
+}
+
+header {
+    margin-top: 50px;
+    font-family: "Monsterrat", sans-serif;
+}
+
+.menu {
+    padding: 10px 30px 15px 4px;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.calendar {
+    margin: auto;
+    width: 600px;
+
+    background: white;
+    box-shadow: 0px 0px 15px 3px rgb(2, 156, 105);
+
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: rgba(46, 229, 159.4);
+    color: white;
+    padding: 40px 30px;
+}
+
+.weekends {
+    display: flex;
+    background-color: rgb(2, 156, 105);
+    color: white;
+    padding: 7px 0;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+
+    font-weight: 300;
+    padding: 10px 0;
+}
+
+.days div {
+    margin-bottom: 10px;
+    padding: 10px 0;
+    transition: all 0.2s;
+}
+
+.today {
+    background-color: rgb(2, 156, 105);
+    color: #fff;
+}
+
+.days div:hover {
+    background-color: rgb(165, 197, 185);
+    cursor: pointer;
+}
+
+.weekends div,
+.days div {
+    width: 14.28%;
+    text-align: center;
+}
+
+#center {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 240px;
+    height: 90px;
+    line-height: 90px;
+    border-radius: 90px;
+    margin: 0 auto;
+    font-family: "Monsterrat", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 5px 10px 5px rgb(2, 156, 105);
+    transition: .3s;
+    margin-right: 20px;
+}
+
+a:hover {
+    background: #2EE59D;
+    box-shadow: 0 15px 20px rgba(46, 229, 159.4);
+    color: white;
+    transform: translateY(-7px);
+
+}
+
+.hidden {
+    display: none;
+}
+
+.talons {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 300;
+    padding: 10px 0;
+
+    margin-bottom: 10px;
+    padding: 10px 0;
+    transition: all 0.2s;
+}
+
+.talons:hover {
+    background-color: rgb(165, 197, 185);
+    cursor: pointer;
+}
+
+.container {
+    width: 450px;
+    height: 500px;
+    background-color: rgb(7, 7, 29);
+    margin: 250px auto 0 auto;
+    text-align: center;
+    padding: 50px;
+}
+
+input[type="text"], inpyt[type="password"] {
+
+    width: 300px;
+    height: 50px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+.dws-submit {
+    padding: 13px 30px;
+    margin: 5px 0 20px 0;
+    font-size: 15px;
+    color: #fff;
+    background-color: darkgrey;
+    border: none;
+
+}
+
+.prev_date {
+    color: gray;
+}
+
+#month {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.prev,
+.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(2, 156, 105);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgb(8, 77, 54);
+    cursor: pointer;
+}

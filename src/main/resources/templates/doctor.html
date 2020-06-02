@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--<meta charset="UTF-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--<link rel="stylesheet" href="css/doctors.css">-->
+    <title th:text="${title}"/>
+    <link rel="stylesheet" href="../static/css/doctors.css" th:href="@{/css/doctors.css}"/>
+    <link rel="stylesheet" href="../static/css/menustyle.css" th:href="@{/css/menustyle.css}"/>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link href="../static/images/favicon.iso.ico" rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.iso.ico}" />
+</head>
+<body>
+<div class="container">
+    <header th:insert="blocks/header :: header"></header>
+    <ol class="rounded mt-5">
+        <li class="mb2 mt-2" th:each="el:${doctors}">
+            <a href="/calendar" th:text="${el.doctor}"
+               th:if="${not #lists.isEmpty((el.doctor))}">
+
+            </a>
+        </li>
+    </ol>
+</div>
+</body>

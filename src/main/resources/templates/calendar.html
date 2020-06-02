@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--<meta charset="UTF-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>Календарь</title>
+    <link rel="stylesheet" href="../static/css/calendarstyle.css" th:href="@{/css/calendarstyle.css}"/>
+    <link rel="stylesheet" href="../static/css/menustyle.css" th:href="@{/css/menustyle.css}"/>
+    <link href="../static/images/favicon.iso.ico" rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.iso.ico}" />
+
+</head>
+<body onLoad="RenderDate()">
+<header th:insert="blocks/header :: header"></header>
+<div class="wrapper">
+    <div class="calendar">
+        <div class="month">
+            <div class="prev" onclick="moveDate('prev')">
+                <span>&#10094</span>
+            </div>
+            <div>
+                <h2 id="month">Март</h2>
+                <p id="date_str"></p>
+            </div>
+            <div class="next" onclick="moveDate('next')">
+                <span>&#10095</span>
+            </div>
+        </div>
+        <div class="weekends">
+            <div>Пн</div>
+            <div>Вт</div>
+            <div>Ср</div>
+            <div>Чт</div>
+            <div>Пн</div>
+            <div>Сб</div>
+            <div>Вс</div>
+        </div>
+        <div class="days">
+
+        </div>
+        <div id="times"></div>
+    </div>
+</div>
+
+</body>
+<script th:inline="javascript" src="../static/javascript/jquery-3.4.1.min.js"></script>
+<script th:inline="javascript" src="../static/javascript/calendar.js" ></script>
+</html>
+
+ 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title th:text="${title}"/>
+    <link rel="stylesheet" href="../static/css/signinstyle.css" th:href="@{/css/signinstyle.css}"/>
+    <link href="../static/images/favicon.iso.ico" rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.iso.ico}" />
+    <style>
+
+    </style>
+</head>
+<body>
+<div class="signin">
+    <form action="/" method="post">
+        <h2 style="color:white">Вход</h2>
+        <input type="text" name="username" placeholder="логин">
+        <br><br>
+        <input type="password" name="password" placeholder="пароль">
+        <br><br>
+        <!--<a href="/signin"><input type="button" value="Войти"></a>-->
+        <button class="ok" type="submit">Войти</button>
+        <br><br>
+        <div id="container">
+
+            <a href="forgot-password.html"
+               style="margin-right:0px; font-size:20px; font-family:'Segoe UI', Tahoma,
+               Geneva, Verdana, sans-serif">Забыли пароль?
+            </a>
+        </div>
+        <br>
+        <p style="color: #ffffff; font-size: 15px">Нет аккаунта?</p>
+        <a href="/signUp" style="font-family:'Play', sans-serif;">Регистрация</a>
+
+    </form>
+</div>
+</body>
+</html>

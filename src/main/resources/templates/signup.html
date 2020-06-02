@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="../static/css/signupstyle.css" th:href="@{/css/signupstyle.css}"/>
+    <link href="../static/images/favicon.iso.ico" rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.iso.ico}" />
+
+</head>
+<body>
+    <div class="signup">
+        <form action="/signUp" method="post">
+            <h2 style="color: #fff;">Зарегистрироваться</h2>
+            <input type="text" name="name" placeholder="Имя (только буквы)">
+            <br><br>
+            <input type="text" name="surname" placeholder="Фамилия (только буквы)">
+            <br><br>
+            <input type="text" name="login" placeholder="Логин min6">
+            <br><br>
+            <input type="password" name="password" placeholder="Пароль min8">
+            <br><br>
+            <input type="password" name="reppassword" placeholder="Подтвердить Пароль">
+            <br><br>
+            <input type="text" name="email" placeholder="E-mail some@some.dom">
+            <br><br>
+            <button class="reristration" type="submit">Зарегистрироваться</button><br>
+            <!--<div id="msg">Вы успешно зарегистрировались <a href=""></a></div>-->
+            <!--<script>-->
+                <!--var username = document.getElementById("name");-->
+                <!--var surname = document.getElementById("surname");-->
+                <!--var pass = document.getElementById("pass");-->
+                <!--var pass2 = document.getElementById("pass2");-->
+                <!--var email = document.getElementById("email");-->
+
+                <!--function main(){-->
+                    <!--if(username.value.length < 2 ) {alert ('Не достаточно символов');}-->
+                    <!--else if(surname.value.length < 2){alert ('Не достаточно символов');}-->
+                    <!--else if(pass.value.length < 8){alert ('Не достаточно символов');}-->
+                    <!--else if(pass.value.length < 8){alert ('Не верный пароль');}-->
+                    <!--else if(email.value.length == 0){alert ('Не достаточно символов');}-->
+
+                    <!---->
+
+                    <!--else{-->
+                        <!--alert('Вы успешно зарегистрировались');-->
+                        <!--}-->
+                    <!--}-->
+
+                <!---->
+            <!--</script>-->
+            <!--<script>-->
+                <!--function myFunction() {-->
+                    <!--var x = document.getElementById("msg");-->
+                    <!--x.className = "show";-->
+                    <!--setTimeout(function(){-->
+                        <!--x.className = x.className.replace("show", "");}, 3000);-->
+                <!--}-->
+            <!--</script>-->
+            <p style="color: #ffffff; font-size: 15px">Уже есть аккаунт?
+                <a href="/" style="text-decoration:none; font-family:'Play', sans-serif; color:yellow;">Войти</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

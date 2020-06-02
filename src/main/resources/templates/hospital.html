@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../static/css/menustyle.css" th:href="@{/css/menustyle.css}"/>
+    <link rel="stylesheet" href="../static/hospital.css" th:href="@{/css/hospital.css}"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link href="../static/images/favicon.iso.ico" rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.iso.ico}" />
+</head>
+
+<body>
+<div class="container">
+
+    <header th:insert="blocks/header :: header"></header>
+
+    <div class="mt-5">
+        <ol class="bullet">
+            <li th:each="el:${hospitals}">
+                <a href="/doctor">
+                    <div class="hospital" th:text="${el.ambulance}"/>
+                </a>
+            </li>
+        </ol>
+    </div>
+</div>
+</body>

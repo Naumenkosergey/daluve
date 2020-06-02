@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"/>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../static/css/menustyle.css" th:href="@{/css/menustyle.css}"/>
+    <link href="../static/images/favicon.iso.ico" rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.iso.ico}" />
+</head>
+<body>
+<div class="container mb-5">
+    <h1 class="mb-5 mt-5" th:text="${title}"/>
+    <!--<header th:insert="blocks/header :: header"></header>-->
+    <section style="display: flex; justify-content: space-around;" class="mt-5 mb-5">
+        <a href="/adminka/add" class="btn btn-warning btn-lg" role="button" aria-pressed="true">
+            Добавить пользователей
+        </a>
+        <a href="/" class="btn btn-danger btn-lg" role="button" aria-pressed="true">
+            Выйти из админки
+        </a>
+    </section>
+
+    <div th:each="el:${users}" class="alert alert-success mt-3">
+        <h3 th:text="${el.name}"/>
+        <h3 th:text="${el.surname}"/>
+        <h3 th:text="${el.login}"/>
+        <h3 th:text="${el.password}"/>
+        <h3 th:text="${el.email}"/>
+    </div>
+</div>
+</body>
+</html>

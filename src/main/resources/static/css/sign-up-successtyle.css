@@ -1,0 +1,22 @@
+body {
+
+    background: rgb(178, 221, 187) url("../images/white.jpg");
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+}
+a{
+    color: yellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+}
+.cong {
+    background: rgba(8, 77, 54, 0.9);
+    padding: 40px;
+    height: 200px;
+    margin-left: 180px;
+    margin: 0 auto;
+    margin-top: 120px;
+    width: 240px;
+}
+h2 {
+    margin-top:35px;
+    margin-left:10px
+}

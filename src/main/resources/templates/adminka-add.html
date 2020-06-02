@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"/>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../static/css/menustyle.css" th:href="@{/css/menustyle.css}"/>
+    <link href="../static/images/favicon.iso.ico" rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.iso.ico}" />
+</head>
+<body>
+<div class="container mt-5 mb-5">
+    <!--<header th:insert="blocks/header :: header"></header><br>-->
+    <h1 class="mb-2 mt-5" th:text="${title}"/>
+    <form action="/adminka/add" method="post" class="mb-5 mt-2">
+        <input type="text" name="name" placeholder="Имя" class="form-control "><br>
+        <input type="text" name="surname" placeholder="Фамилия" class="form-control"><br>
+        <input type="text" name="login" placeholder="логин" class="form-control"><br>
+        <input type="text" name="password" placeholder="пароль" class="form-control"><br>
+        <input type="text" name="email" placeholder="Email" class="form-control"><br>
+        <section style="display: flex; justify-content: space-around;">
+            <button type="submit" class="btn btn-success btn-lg">Добавить пользователя</button>
+            <a href="/adminka" class="btn btn-warning btn-lg" role="button" aria-pressed="true">
+                Перейти на список пользователей
+            </a>
+            <a href="/" class="btn btn-danger btn-lg" role="button" aria-pressed="true">
+                Выйти из админки
+            </a>
+        </section>
+    </form>
+</div>
+</body>
+</html>
